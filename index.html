@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
 
-  <title>Frontend Mentor | Interactive pricing component</title>
-</head>
+  <body>
+    <header>
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial. No credit card required.</p>
+    </header>
 
-<body>
+    <main class="card">
+      <div class="pageview">
+        <label for="traffic">100k Pageviews</label>
+        <input type="range" name="traffic" id="traffic" />
+        <p class="price">$ 14.00 <small>/ month</small></p>
+      </div>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required.
+      <div class="payment-type">
+        <label for="payment">Monthly Billing</label>
+        <input type="checkbox" name="payment" id="payment" />
+        <label for="payment">Yearly Billing <span> -25%</span> </label>
+      </div>
 
-  Pageviews
-  $ /month
+      <div class="resume">
+        <ul class="advantages">
+          <li class="advantage-item">
+            <img src="./images/icon-check.svg" alt="" aria-hidden="true" />
+            Unlimited websites
+          </li>
+          <li class="advantage-item">
+            <img src="./images/icon-check.svg" alt="" aria-hidden="true" />
+            100% data ownership
+          </li>
+          <li class="advantage-item">
+            <img src="./images/icon-check.svg" alt="" aria-hidden="true" />
+            Email reports
+          </li>
+        </ul>
 
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-</body>
-
+        <button>Start my trial</button>
+      </div>
+    </main>
+  </body>
 </html>
