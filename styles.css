@@ -20,10 +20,54 @@
 }
 
 body {
+  position: relative;
   background-color: var(--very-pale-blue);
+  min-height: 100vh;
+  font-size: 0.9375rem;
+  padding: 3.75rem 0;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 50%;
+  background: url(./images/bg-pattern.svg) no-repeat;
+  background-position: left;
+  background-size: cover;
+  z-index: -1;
 }
 
 body,
 button {
   font-family: "Manrope", sans-serif;
 }
+
+/* Header */
+
+header {
+  text-align: center;
+  background: url(./images/pattern-circles.svg) center center no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 8.125rem;
+}
+
+header h1 {
+  color: var(--dark-desaturated-blue);
+  font-size: 1.125rem;
+}
+
+header p {
+  color: var(--grayish);
+  width: 10rem;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* Card component */
