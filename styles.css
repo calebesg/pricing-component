@@ -28,8 +28,8 @@ body {
 }
 
 body::before {
-  content: "";
-  position: absolute;
+  content: '';
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;
@@ -42,7 +42,7 @@ body::before {
 
 body,
 button {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 /* Header */
@@ -71,3 +71,137 @@ header p {
 }
 
 /* Card component */
+.card {
+  background-color: white;
+  width: 90%;
+  margin: 1.875rem auto 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 1.5rem hsl(223, 50%, 87%, 0.2);
+}
+
+.pageview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.875rem 1.5rem;
+}
+
+.pageview label {
+  text-transform: uppercase;
+  color: var(--grayish);
+  letter-spacing: 0.125rem;
+  font-size: 0.75rem;
+}
+
+.pageview #traffic {
+  margin-top: 1.625rem;
+  width: 100%;
+}
+
+.pageview .price {
+  margin-top: 1.875rem;
+  color: var(--dark-desaturated-blue);
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pageview .price small {
+  color: var(--grayish);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.payment-type {
+  color: var(--grayish);
+  font-size: 0.75rem;
+  padding-right: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* imput checkbox */
+.payment-type #payment {
+  margin: 0 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.payment-type #payment::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 2.5rem;
+  height: 1.25rem;
+  bottom: -0.25rem;
+  border-radius: 1.25rem;
+  transform: translate(-50%);
+  background-color: var(---very-light-grayish-blue);
+  transition: background-color 0.3s;
+}
+
+.payment-type #payment:hover::before {
+  background-color: var(--strong-cyan);
+}
+
+.payment-type #payment::after {
+  content: '';
+  position: absolute;
+  width: 0.875rem;
+  height: 0.875rem;
+  bottom: -1px;
+  margin-left: -0.625rem;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.payment-type #payment:checked::after {
+  margin-left: 0.625rem;
+}
+
+.payment-type label span {
+  color: var(--light-red);
+  background-color: var(--light-grayish-red);
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.625rem;
+  margin-left: 0.25rem;
+}
+
+/* RESUME */
+.resume {
+  margin-top: 2.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--light-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume ul.advantages {
+  list-style: none;
+  text-align: center;
+}
+
+.advantages .advantage-item {
+  color: var(--grayish);
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.advantages .advantage-item img {
+  margin-right: 0.5rem;
+}
+
+.resume button {
+  margin-top: 1.875rem;
+  background-color: var(--dark-desaturated-blue);
+  border: none;
+  color: var(---very-light-grayish-blue);
+  font-weight: 900;
+  height: 3rem;
+  width: 12.5rem;
+  border-radius: 1.5rem;
+}
