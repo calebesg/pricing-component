@@ -5,6 +5,6 @@ const moveBar = function () {
   fill.style.width = `${slider.value}%`;
 };
 
-slider.addEventListener('input', moveBar);
-
 moveBar();
+
+slider.addEventListener('input', moveBar);

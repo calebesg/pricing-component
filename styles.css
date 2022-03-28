@@ -202,22 +202,23 @@ header p {
   appearance: none;
   position: relative;
   cursor: pointer;
+  outline: transparent;
 }
 
 .payment-type #payment::before {
   content: '';
   position: absolute;
+  top: 0;
   left: 50%;
   width: 2.5rem;
   height: 1.25rem;
-  bottom: -0.25rem;
   border-radius: 1.25rem;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   background-color: var(---very-light-grayish-blue);
   transition: background-color 0.3s;
 }
 
-.payment-type #payment:hover::before {
+.payment-type #payment:checked::before {
   background-color: var(--strong-cyan);
 }
 
@@ -226,15 +227,16 @@ header p {
   position: absolute;
   width: 0.875rem;
   height: 0.875rem;
-  bottom: -1px;
-  margin-left: -0.625rem;
+  margin-left: -1rem;
+  bottom: 50%;
   border-radius: 50%;
+  transform: translateY(50%);
   background-color: white;
   transition: all 0.3s;
 }
 
 .payment-type #payment:checked::after {
-  margin-left: 0.625rem;
+  margin-left: 0.2rem;
 }
 
 .payment-type label span {
