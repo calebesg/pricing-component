@@ -31,7 +31,18 @@
     <main class="card">
       <div class="pageview">
         <label for="traffic">100k Pageviews</label>
-        <input type="range" name="traffic" id="traffic" />
+        <div class="range">
+          <div class="bar"><span class="fill"></span></div>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            step="10"
+            name="traffic"
+            id="traffic"
+            class="slider"
+          />
+        </div>
         <p class="price">$ 14.00 <small>/ month</small></p>
       </div>
 
@@ -60,5 +71,7 @@
         <button>Start my trial</button>
       </div>
     </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>
