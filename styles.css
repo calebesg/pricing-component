@@ -281,4 +281,81 @@ header p {
   height: 3rem;
   width: 12.5rem;
   border-radius: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.resume button:hover {
+  color: white;
+}
+
+@media (min-width: 35rem) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  header p {
+    width: fit-content;
+  }
+
+  .card {
+    width: 540px;
+  }
+
+  .pageview {
+    padding: 50px 45px 40px;
+    display: grid;
+    grid-template-areas: 'view price' 'slider slider';
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pageview label {
+    grid-area: view;
+  }
+
+  .pageview .price {
+    grid-area: price;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .pageview .range {
+    grid-area: slider;
+  }
+
+  .payment-type {
+    position: relative;
+    justify-content: center;
+  }
+
+  .payment-type #payment {
+    margin: 0 2rem;
+  }
+
+  .payment-type label span {
+    position: absolute;
+    margin-left: 0.625rem;
+  }
+
+  .payment-type label span::after {
+    content: ' discount';
+  }
+
+  .resume {
+    padding: 2.1875rem 45px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .resume ul.advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume button {
+    margin: 0;
+  }
 }
